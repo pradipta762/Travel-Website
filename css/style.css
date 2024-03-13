@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #f5f5f5;
+    --secondary-color: #fff;
+    --accent-color: #26aaf1;
+    --text-primary: #000;
+    --text-secondary: rgba(0, 0, 0, 0.5);
+    --golden-color: #ffd700;
+    --heading-ff: "Montserrat", sans-serif;
+    --body-ff: "Athiti", sans-serif;
+    --hero-section-height: 100vh;
+}
+
+/*--------------------------------
+        ## Flush CSS
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: var(--body-ff);
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* -------------------------------------- 
+        ## Utility Classes Start
+ -------------------------------------- */
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content-wrapper {
+    padding: 50px 0;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1e9ce0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.heading-center {
+    text-align: center;
+    margin-bottom: 2.25rem;
+}
+
+.heading-center h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: var(--heading-ff);
+    margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+    color: var(--text-secondary);
+}
+
+/* -------------------------------------- 
+        ## Utility Classes End
+ -------------------------------------- */
+
+
+
+/* -------------------------------------- 
+        ## Navbar & Hero section Start
+ -------------------------------------- */
+
+.hero-section {
+    height: var(--hero-section-height);
+    background-image: url(../img/hero-image.jpg);
+    background-size: cover;
+    background-position: 100% 5%;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+}
+
+.dark-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.navbar {
+    /* border: 1px solid white; */
+    height: 40px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.blue-color {
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link ul {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-link ul li:hover,
+.active {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.mobile-menu {
+    color: var(--primary-color);
+    font-size: 1.85rem;
+    display: none;
+}
+
+.hero-content {
+    height: calc(var(--hero-section-height) - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: var(--heading-ff);
+    text-align: center;
+}
+
+.search-bar {
+    position: relative;
+    padding: 0.85rem;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    margin-top: 1.85rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar i,
+.search-bar .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-bar i {
+    left: 20px;
+    font-size: 30px;
+    color: #707070;
+}
+
+.search-bar input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1.125rem;
+    font-weight: 400;
+    border: none;
+    padding: 0 155px 0 2.5rem;
+    background-color: transparent;
+}
+
+.search-bar .btn {
+    right: 8px;
+}
+
+.search-bar .btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.hero-btm {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-btm .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.85rem;
+}
+
+.hero-btm .heading h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.message {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* -------------------------------------- 
+        ## Navbar & Hero section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## Popular Places Section Start
+ -------------------------------------- */
+
+.swiper-card {
+    width: 100%;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.card .img-container {
+    margin-bottom: 0.5rem;
+}
+
+.card .img-container img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-heading h3,
+.sub-heading {
+    margin-bottom: 0.5rem;
+}
+
+.card-heading h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* color: var(--accent-color); */
+}
+
+.booking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.rating-star {
+    color: var(--golden-color);
+}
+
+.slider-btn {
+    display: none;
+}
+
+/* -------------------------------------- 
+        ## Popular Places Section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## Image Grid Section Start
+ -------------------------------------- */
+
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.img-container {
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.img-container:nth-of-type(3) {
+    grid-area: 1 / 3 / 3 / 4;
+    height: auto;
+}
+
+.img-container:nth-of-type(7) {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.img-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    padding: 1rem;
+    color: var(--secondary-color);
+    background: linear-gradient(to top, #00010015, #00000082);
+    text-shadow: 0 1px 0 black;
+    border-radius: 0.5rem;
+}
+
+.img-place {
+    color: var(--primary-color);
+}
+
+.img-btn {
+    position: relative;
+    top: 1.5rem;
+    padding: 1rem 1.85rem;
+}
+
+
+/* -------------------------------------- 
+        ## Image Grid Section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## Video Section Start
+ -------------------------------------- */
+
+.video {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    border-radius: 0.5rem;
+    z-index: 20;
+}
+
+.fa-circle-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    z-index: 30;
+    box-shadow: 0 0 20px var(--accent-color);
+    cursor: pointer;
+}
+
+.video-player {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-player video {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glass-effect {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--black-500);
+    backdrop-filter: blur(10px);
+}
+
+.fa-xmark {
+    color: var(--accent-color);
+    position: absolute;
+    z-index: 1000;
+    right: 80px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.fa-xmark:hover {
+    color: red;
+}
+
+/* -------------------------------------- 
+        ## Video Section End
+ -------------------------------------- */
+
+/* -------------------------------------- 
+        ## Hotel Section End
+ -------------------------------------- */
+
+.hotel-section .card,
+.guide-section .card {
+    text-align: center;
+}
+
+.light-blue {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.hotel-section .price {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* -------------------------------------- 
+        ## Hotel Section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## Testimonial Section Start
+ -------------------------------------- */
+
+.testimonial-section {
+    margin-bottom: 2rem;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-details img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.place {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.testimonial-content {
+    text-align: center;
+}
+
+/* -------------------------------------- 
+        ## Testimonial Section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## CTA Section Start
+ -------------------------------------- */
+
+.cta-section {
+    background-image: url(../img/cta-image.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    color: var(--primary-color);
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--text-secondary);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.cta-section h3 {
+    font-size: 2.85rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.cta {
+    padding: 1.2rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+
+.cta span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cta .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+}
+
+/* -------------------------------------- 
+        ## CTA Section End
+ -------------------------------------- */
+
+
+/* -------------------------------------- 
+        ## Footer Section Start
+ -------------------------------------- */
+
+.footer-wrapper {
+    border-bottom: 1px solid rgba(149, 157, 165, 0.2);
+    padding-bottom: 2rem;
+}
+
+.footer-heading h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.footer-column ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-column ul li i {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.85rem;
+}
+
+.social-links i {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 50%;
+    padding: 0.85rem;
+    color: var(--accent-color);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.social-links i:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.footer-btm {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-btm p {
+    letter-spacing: 1.5px;
+}
+
+/* -------------------------------------- 
+        ## Footer Section End
+ -------------------------------------- */

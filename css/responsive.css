@@ -1,0 +1,53 @@
+@media screen and (max-width: 850px) {
+
+    .nav-link,
+    .nav-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .show {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 110%;
+        transition: all 0.5s ease-in-out;
+        padding: 1rem 0;
+        z-index: 99;
+    }
+
+    .show::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .hero-section {
+        --hero-section-height: 50vh;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
