@@ -153,8 +153,8 @@ svg {
  -------------------------------------- */
 
 .hero-section {
-    height: var(--hero-section-height);
-    background-image: url(../img/hero-image.jpg);
+    /* min-height: var(--hero-section-height); */
+    background-image: url(../img/home1.jpg);
     background-size: cover;
     background-position: 100% 5%;
     position: relative;
@@ -169,7 +169,7 @@ svg {
     top: 0;
     left: 0;
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.2;
     z-index: -1;
 }
 
@@ -214,11 +214,39 @@ svg {
 }
 
 .hero-content {
-    height: calc(var(--hero-section-height) - 40px);
+    /* border: 1px solid yellow; */
+    margin-top: 2.5rem;
+    color: var(--secondary-color);
+    padding: 2.5rem 0;
+}
+
+.hero-content  .sub-heading {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.hero-heading {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 2.85rem;
+    line-height: 1.4;
+}
+
+.hero-heading span {
+    font-weight: 700;
+}
+
+.hero-content .btn {
+    padding: 1.25rem 1.5rem;
+    border-radius: 1px;
+}
+
+.hero-social-media {
+    margin-top: 5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .heading h1 {
@@ -227,49 +255,6 @@ svg {
     color: var(--primary-color);
     font-family: var(--heading-ff);
     text-align: center;
-}
-
-.search-bar {
-    position: relative;
-    padding: 0.85rem;
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    margin-top: 1.85rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar i,
-.search-bar .btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.search-bar i {
-    left: 20px;
-    font-size: 30px;
-    color: #707070;
-}
-
-.search-bar input {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    font-size: 1.125rem;
-    font-weight: 400;
-    border: none;
-    padding: 0 155px 0 2.5rem;
-    background-color: transparent;
-}
-
-.search-bar .btn {
-    right: 8px;
-}
-
-.search-bar .btn:active {
-    transform: translateY(-50%) scale(0.98);
 }
 
 .hero-btm {
