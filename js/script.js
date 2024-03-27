@@ -20,6 +20,24 @@ navItem.forEach((navList) => {
     })
 })
 
+
+// Mode change
+let lightMode = document.querySelector(".light-mode");
+let darkMode = document.querySelector(".dark-mode");
+let body = document.querySelector(".body");
+
+darkMode.addEventListener("click", () => {
+    lightMode.style.display = "block";
+    darkMode.style.display = "none";
+    body.classList.toggle("change-mode");
+})
+
+lightMode.addEventListener("click", () => {
+    darkMode.style.display = "block";
+    lightMode.style.display = "none";
+})
+
+
 // Swiper Section
 
 var swiper = new Swiper(".mySwiper", {

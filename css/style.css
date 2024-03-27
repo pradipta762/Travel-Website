@@ -290,6 +290,20 @@ svg {
     color: var(--text-secondary);
 }
 
+.light-dark-mode {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.light-mode {
+    display: none;
+}
+
+.dark-mode {
+    display: block;
+}
+
+
 /* -------------------------------------- 
         ## Navbar & Hero section End
  -------------------------------------- */
