@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Athiti:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 :root {
     --primary-color: #f5f5f5;
     --secondary-color: #fff;
+    --hero-font-color: #fff;
     --accent-color: #26aaf1;
     --text-primary: #000;
     --text-secondary: rgba(0, 0, 0, 0.5);
     --golden-color: #ffd700;
     --heading-ff: "Montserrat", sans-serif;
-    --body-ff: "Athiti", sans-serif;
+    --body-ff: "Lato", sans-serif;
     --hero-section-height: 100vh;
+}
+
+.change-mode {
+    --primary-color: #262525;
+    --secondary-color: #3b3b3b;
+    /* --primary-color: #092635;
+    --secondary-color: #183D3D; */
+    --text-primary: #fff;
+    --text-secondary: #f1f1f1;
 }
 
 /*--------------------------------
@@ -100,7 +110,7 @@ svg {
 
 .btn {
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--hero-font-color);
     padding: 0.5rem 1.5rem;
     font-weight: 700;
     border-radius: 0.25rem;
@@ -136,6 +146,7 @@ svg {
     font-weight: 700;
     font-family: var(--heading-ff);
     margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 .sub-heading {
@@ -153,7 +164,6 @@ svg {
  -------------------------------------- */
 
 .hero-section {
-    /* min-height: var(--hero-section-height); */
     background-image: url(../img/home1.jpg);
     background-size: cover;
     background-position: 100% 5%;
@@ -174,9 +184,8 @@ svg {
 }
 
 .navbar {
-    /* border: 1px solid white; */
     height: 40px;
-    color: var(--primary-color);
+    color: var(--hero-font-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,14 +210,20 @@ svg {
     font-weight: 500;
 }
 
+.nav-link ul li a {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 .nav-link ul li:hover,
 .active {
     color: var(--accent-color);
-    transition: color 0.3s ease;
+    border-bottom: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
 }
 
 .mobile-menu {
-    color: var(--primary-color);
+    color: var(--hero-font-color);
     font-size: 1.85rem;
     display: none;
 }
@@ -216,12 +231,12 @@ svg {
 .hero-content {
     /* border: 1px solid yellow; */
     margin-top: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--hero-font-color);
     padding: 2.5rem 0;
 }
 
 .hero-content  .sub-heading {
-    color: var(--secondary-color);
+    color: var(--hero-font-color);
     font-size: 1.1rem;
 }
 
@@ -260,7 +275,8 @@ svg {
 .hero-btm {
     background-color: var(--secondary-color);
     border-radius: 0.5rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .icon {
@@ -282,6 +298,7 @@ svg {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 .message {
@@ -346,7 +363,7 @@ svg {
 .card-heading h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    /* color: var(--accent-color); */
+    color: var(--text-primary);
 }
 
 .booking {
@@ -358,6 +375,11 @@ svg {
 .price {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.booking span {
+    color: var(--text-primary);
 }
 
 .rating-star {
@@ -423,7 +445,7 @@ svg {
 }
 
 .img-place {
-    color: var(--primary-color);
+    color: var(--hero-font-color);
 }
 
 .img-btn {
@@ -458,7 +480,7 @@ video {
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 4.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--hero-font-color);
     color: var(--accent-color);
     border-radius: 50%;
     z-index: 30;
@@ -586,6 +608,10 @@ video {
     text-align: center;
 }
 
+.testimonial-section .rating span {
+    color: var(--text-primary);
+}
+
 /* -------------------------------------- 
         ## Testimonial Section End
  -------------------------------------- */
@@ -611,7 +637,7 @@ video {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--text-secondary);
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0.9;
     z-index: -1;
 }
@@ -620,6 +646,7 @@ video {
     font-size: 2.85rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
+    color: var(--hero-font-color);
 }
 
 .cta {
@@ -661,6 +688,7 @@ video {
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 0.85rem;
+    color: var(--text-primary);
 }
 
 .footer-column ul li {
@@ -706,6 +734,7 @@ video {
 
 .footer-btm p {
     letter-spacing: 1.5px;
+    color: var(--text-primary);
 }
 
 /* -------------------------------------- 

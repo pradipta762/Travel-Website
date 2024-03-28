@@ -29,12 +29,13 @@ let body = document.querySelector(".body");
 darkMode.addEventListener("click", () => {
     lightMode.style.display = "block";
     darkMode.style.display = "none";
-    body.classList.toggle("change-mode");
+    body.classList.add("change-mode");
 })
 
 lightMode.addEventListener("click", () => {
     darkMode.style.display = "block";
     lightMode.style.display = "none";
+    body.classList.remove("change-mode");
 })
 
 
